@@ -1,0 +1,133 @@
+{
+    "Reservations": [
+        {
+            "Groups": [],
+            "Instances": [
+                {
+                    "AmiLaunchIndex": 0,
+                    "ImageId": "ami-08962a4068733a2b6",
+                    "InstanceId": "i-0425fc7d6a879c686",
+                    "InstanceType": "t2.nano",
+                    "KeyName": "Pi-Hole",
+                    "LaunchTime": "2021-03-26T19:29:33+00:00",
+                    "Monitoring": {
+                        "State": "disabled"
+                    },
+                    "Placement": {
+                        "AvailabilityZone": "us-east-2a",
+                        "GroupName": "",
+                        "Tenancy": "default"
+                    },
+                    "PrivateDnsName": "ip-10-10-10-90.us-east-2.compute.internal",
+                    "PrivateIpAddress": "10.10.10.90",
+                    "ProductCodes": [],
+                    "PublicDnsName": "",
+                    "State": {
+                        "Code": 80,
+                        "Name": "stopped"
+                    },
+                    "StateTransitionReason": "User initiated",
+                    "SubnetId": "subnet-01858764075317f9e",
+                    "VpcId": "vpc-02e65cf9295099b8c",
+                    "Architecture": "x86_64",
+                    "BlockDeviceMappings": [
+                        {
+                            "DeviceName": "/dev/sda1",
+                            "Ebs": {
+                                "AttachTime": "2021-03-26T18:02:51+00:00",
+                                "DeleteOnTermination": true,
+                                "Status": "attached",
+                                "VolumeId": "vol-02d29f38077019dee"
+                            }
+                        }
+                    ],
+                    "ClientToken": "",
+                    "EbsOptimized": false,
+                    "EnaSupport": true,
+                    "Hypervisor": "xen",
+                    "IamInstanceProfile": {
+                        "Arn": "arn:aws:iam::130514070575:instance-profile/AmazonSSMRoleForInstancesQuickSetup",
+                        "Id": "AIPAR4YZ6VQXWWD44HNBA"
+                    },
+                    "NetworkInterfaces": [
+                        {
+                            "Attachment": {
+                                "AttachTime": "2021-03-26T18:02:51+00:00",
+                                "AttachmentId": "eni-attach-0cc10b5be05b4cde7",
+                                "DeleteOnTermination": true,
+                                "DeviceIndex": 0,
+                                "Status": "attached"
+                            },
+                            "Description": "Primary network interface",
+                            "Groups": [
+                                {
+                                    "GroupName": "launch-wizard-1",
+                                    "GroupId": "sg-0a11922d11e62107f"
+                                }
+                            ],
+                            "Ipv6Addresses": [],
+                            "MacAddress": "02:88:04:d8:49:30",
+                            "NetworkInterfaceId": "eni-0392949a0a1eff79f",
+                            "OwnerId": "130514070575",
+                            "PrivateDnsName": "ip-10-10-10-90.us-east-2.compute.internal",
+                            "PrivateIpAddress": "10.10.10.90",
+                            "PrivateIpAddresses": [
+                                {
+                                    "Primary": true,
+                                    "PrivateDnsName": "ip-10-10-10-90.us-east-2.compute.internal",
+                                    "PrivateIpAddress": "10.10.10.90"
+                                }
+                            ],
+                            "SourceDestCheck": true,
+                            "Status": "in-use",
+                            "SubnetId": "subnet-01858764075317f9e",
+                            "VpcId": "vpc-02e65cf9295099b8c",
+                            "InterfaceType": "interface"
+                        }
+                    ],
+                    "RootDeviceName": "/dev/sda1",
+                    "RootDeviceType": "ebs",
+                    "SecurityGroups": [
+                        {
+                            "GroupName": "launch-wizard-1",
+                            "GroupId": "sg-0a11922d11e62107f"
+                        }
+                    ],
+                    "SourceDestCheck": true,
+                    "StateReason": {
+                        "Code": "Client.InstanceInitiatedShutdown",
+                        "Message": "Client.InstanceInitiatedShutdown: Instance initiated shutdown"
+                    },
+                    "Tags": [
+                        {
+                            "Key": "Name",
+                            "Value": "Pi-Hole-Dev"
+                        }
+                    ],
+                    "VirtualizationType": "hvm",
+                    "CpuOptions": {
+                        "CoreCount": 1,
+                        "ThreadsPerCore": 1
+                    },
+                    "CapacityReservationSpecification": {
+                        "CapacityReservationPreference": "open"
+                    },
+                    "HibernationOptions": {
+                        "Configured": false
+                    },
+                    "MetadataOptions": {
+                        "State": "applied",
+                        "HttpTokens": "optional",
+                        "HttpPutResponseHopLimit": 1,
+                        "HttpEndpoint": "enabled"
+                    },
+                    "EnclaveOptions": {
+                        "Enabled": false
+                    }
+                }
+            ],
+            "OwnerId": "130514070575",
+            "ReservationId": "r-0de1aeabfc7d9b763"
+        }
+    ]
+}
