@@ -9,12 +9,13 @@
                 },
                 "position": {
                     "x": 640,
-                    "y": 370
+                    "y": 350
                 },
                 "z": 3,
                 "parent": "7e0064a0-4abb-4e40-a6e9-4e1c7acc60c7",
                 "embeds": [],
                 "iscontainedinside": [
+                    "7e0064a0-4abb-4e40-a6e9-4e1c7acc60c7",
                     "7e0064a0-4abb-4e40-a6e9-4e1c7acc60c7",
                     "7e0064a0-4abb-4e40-a6e9-4e1c7acc60c7",
                     "7e0064a0-4abb-4e40-a6e9-4e1c7acc60c7",
@@ -36,12 +37,12 @@
             },
             "31eac502-4be4-4d4e-9eb9-58927f6761fb": {
                 "size": {
-                    "width": 1380,
-                    "height": 900
+                    "width": 390,
+                    "height": 440
                 },
                 "position": {
                     "x": 550,
-                    "y": 250
+                    "y": 290
                 },
                 "z": 1,
                 "embeds": [
@@ -52,12 +53,12 @@
             },
             "7e0064a0-4abb-4e40-a6e9-4e1c7acc60c7": {
                 "size": {
-                    "width": 540,
-                    "height": 300
+                    "width": 170,
+                    "height": 180
                 },
                 "position": {
                     "x": 610,
-                    "y": 340
+                    "y": 320
                 },
                 "z": 2,
                 "parent": "31eac502-4be4-4d4e-9eb9-58927f6761fb",
@@ -65,6 +66,7 @@
                     "32c18b95-d295-4a5d-9b7d-0b8741ceacbd"
                 ],
                 "iscontainedinside": [
+                    "31eac502-4be4-4d4e-9eb9-58927f6761fb",
                     "31eac502-4be4-4d4e-9eb9-58927f6761fb",
                     "31eac502-4be4-4d4e-9eb9-58927f6761fb",
                     "31eac502-4be4-4d4e-9eb9-58927f6761fb",
@@ -89,13 +91,14 @@
                     "height": 60
                 },
                 "position": {
-                    "x": 1210,
-                    "y": 340
+                    "x": 820,
+                    "y": 350
                 },
                 "z": 2,
                 "parent": "31eac502-4be4-4d4e-9eb9-58927f6761fb",
                 "embeds": [],
                 "iscontainedinside": [
+                    "31eac502-4be4-4d4e-9eb9-58927f6761fb",
                     "31eac502-4be4-4d4e-9eb9-58927f6761fb",
                     "31eac502-4be4-4d4e-9eb9-58927f6761fb",
                     "31eac502-4be4-4d4e-9eb9-58927f6761fb",
@@ -120,8 +123,8 @@
                     "height": 60
                 },
                 "position": {
-                    "x": 120,
-                    "y": 90
+                    "x": 410,
+                    "y": 420
                 },
                 "z": 1,
                 "embeds": []
@@ -137,12 +140,12 @@
             },
             "11e07b46-6cbe-4c48-848a-87fe00770c93": {
                 "size": {
-                    "width": 450,
-                    "height": 330
+                    "width": 150,
+                    "height": 130
                 },
                 "position": {
-                    "x": 580,
-                    "y": 670
+                    "x": 630,
+                    "y": 580
                 },
                 "z": 2,
                 "parent": "31eac502-4be4-4d4e-9eb9-58927f6761fb",
@@ -163,10 +166,12 @@
                     "31eac502-4be4-4d4e-9eb9-58927f6761fb",
                     "31eac502-4be4-4d4e-9eb9-58927f6761fb",
                     "31eac502-4be4-4d4e-9eb9-58927f6761fb",
+                    "31eac502-4be4-4d4e-9eb9-58927f6761fb",
                     "31eac502-4be4-4d4e-9eb9-58927f6761fb"
                 ],
                 "dependson": [
-                    "7e0064a0-4abb-4e40-a6e9-4e1c7acc60c7"
+                    "7e0064a0-4abb-4e40-a6e9-4e1c7acc60c7",
+                    "83907f0e-06ec-468a-9a4d-82eeb9da22ec"
                 ]
             },
             "ed58745f-9231-4a20-aec0-68e4e7ba9d27": {
@@ -175,13 +180,17 @@
                     "height": 60
                 },
                 "position": {
-                    "x": 610,
-                    "y": 700
+                    "x": 660,
+                    "y": 610
                 },
                 "z": 3,
                 "parent": "11e07b46-6cbe-4c48-848a-87fe00770c93",
                 "embeds": [],
+                "isassociatedwith": [
+                    "1d263212-7350-41ed-aec1-019b9966a101"
+                ],
                 "iscontainedinside": [
+                    "11e07b46-6cbe-4c48-848a-87fe00770c93",
                     "11e07b46-6cbe-4c48-848a-87fe00770c93",
                     "11e07b46-6cbe-4c48-848a-87fe00770c93",
                     "11e07b46-6cbe-4c48-848a-87fe00770c93",
@@ -198,6 +207,26 @@
                 "dependson": [
                     "83907f0e-06ec-468a-9a4d-82eeb9da22ec"
                 ]
+            },
+            "e5a61831-8ac6-45af-98b5-af7241638a42": {
+                "source": {
+                    "id": "ed58745f-9231-4a20-aec0-68e4e7ba9d27",
+                    "selector": "g:nth-child(1) g:nth-child(4) g:nth-child(1) circle:nth-child(1)     ",
+                    "port": "AWS::RefLink-AWS::EC2::VPNGateway/AWS::EC2::InternetGateway-GatewayId"
+                },
+                "target": {
+                    "id": "1d263212-7350-41ed-aec1-019b9966a101"
+                },
+                "z": 5
+            },
+            "8d0b6194-9a69-4037-8d17-cb9ecd930fe4": {
+                "source": {
+                    "id": "11e07b46-6cbe-4c48-848a-87fe00770c93"
+                },
+                "target": {
+                    "id": "83907f0e-06ec-468a-9a4d-82eeb9da22ec"
+                },
+                "z": 4
             }
         }
     },
@@ -421,7 +450,8 @@
                 }
             },
             "DependsOn": [
-                "TestSubnet"
+                "TestSubnet",
+                "EC2VPCG1VWHV"
             ]
         },
         "TestRoute": {
@@ -433,7 +463,7 @@
                 },
                 "GatewayId": {
                     "Ref": "TestInternetGateway"
-                  }
+                }
             },
             "Metadata": {
                 "AWS::CloudFormation::Designer": {
