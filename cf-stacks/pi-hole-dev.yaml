@@ -13,4 +13,40 @@ Parameters:
       t2.small
 
 Resources:
-  
+  Pi-Hole-SG-Dev:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Security Group For PiHole Development EC2 Instance
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: '80'
+          ToPort: '80'
+          CidrIp: #SourceNetwork
+        - IpProtocol: tcp
+          FromPort: '53'
+          ToPort: '53'
+          CidrIp: #SourceNetwork
+        - IpProtocol: udp
+          FromPort: '53'
+          ToPort: '53'
+          CidrIp: #SourceNetwork
+        - IpProtocol: tcp
+          FromPort: '22'
+          ToPort: '22'
+          CidrIp: 10.10.20.75/32
+        - IpProtocol: tcp
+          FromPort: '443'
+          ToPort: '443'
+          CidrIp: #SourceNetwork
+        - IpProtocol: icmp
+          FromPort: '-1'
+          ToPort: '-1'
+          CidrIp: #SourceNetwork
+
+  Pi-Hole-Dev:
+    Type: AWS::EC2::Instance
+    Properties:
+      InstanceType:
+        Ref: InstanceType
+      KeyName:
+        Ref: KeyName
