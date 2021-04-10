@@ -1,4 +1,4 @@
-AWSTempalteFormatVersion : 2010-09-09
+AWSTemplateFormatVersion: "2010-09-09"
 Description: Development Environment For Grover Pi-Hole.
 
 Parameters:
@@ -7,29 +7,52 @@ Parameters:
     Type: AWS::EC2::KeyPair::KeyName
   InstanceType:
     Description: Instance Type For Dev Instance
+    Type: "String"
+    Default: t2.nano
     AllowedValues:
-      t2.nano
-      t2.micro
-      t2.small
+      - t2.nano
+      - t2.micro
+      - t2.small
 
 Resources:
-  Pi-Hole-SG-Dev:
+  GroverPiholeDevEast:
+    Type: AWS::EC2::Subnet
+    Properties:
+      AvailabilityZone: us-east-1a
+      CidrBlock: 10.10.30.0/24
+      VpcId: vpc-0c2665f6106a29ffb
+
+  PiHoleDev:
+    Type: AWS::EC2::Instance
+    Properties:
+      InstanceType:
+        Ref: InstanceType
+      KeyName:
+        Ref: KeyName
+      ImageId: ami-042e8287309f5df03
+      SubnetId:
+        Ref: GroverPiholeDevEast
+      SecurityGroupIds:
+        - !GetAtt "PiHoleSGDev.GroupId"
+
+  PiHoleSGDev:
     Type: AWS::EC2::SecurityGroup
     Properties:
       GroupDescription: Security Group For PiHole Development EC2 Instance
+      VpcId: vpc-0c2665f6106a29ffb
       SecurityGroupIngress:
         - IpProtocol: tcp
           FromPort: '80'
           ToPort: '80'
-          CidrIp: #SourceNetwork
+          CidrIp: #sourcenetwork
         - IpProtocol: tcp
           FromPort: '53'
           ToPort: '53'
-          CidrIp: #SourceNetwork
+          CidrIp: #sourcenetwork
         - IpProtocol: udp
           FromPort: '53'
           ToPort: '53'
-          CidrIp: #SourceNetwork
+          CidrIp: #sourcenetwork
         - IpProtocol: tcp
           FromPort: '22'
           ToPort: '22'
@@ -37,16 +60,14 @@ Resources:
         - IpProtocol: tcp
           FromPort: '443'
           ToPort: '443'
-          CidrIp: #SourceNetwork
+          CidrIp: #sourcenetwork
         - IpProtocol: icmp
           FromPort: '-1'
           ToPort: '-1'
-          CidrIp: #SourceNetwork
+          CidrIp: #sourcenetwork
 
-  Pi-Hole-Dev:
-    Type: AWS::EC2::Instance
+  PiHoleDevEIP:
+    Type: AWS::EC2::EIP
     Properties:
-      InstanceType:
-        Ref: InstanceType
-      KeyName:
-        Ref: KeyName
+      InstanceId:
+        Ref: PiHoleDev
